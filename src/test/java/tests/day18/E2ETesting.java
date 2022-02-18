@@ -33,6 +33,14 @@ public class E2ETesting {
         //7. Açılan sayfadaki tüm metin kutularına istediğiniz verileri girin.
         Faker faker = new Faker();
 
+        System.out.println(faker.number().digits(4));
+
+
+        hotelMyCampPage.createHotelPageCodeBox.sendKeys(faker.number().digits(4));
+
+
+
+
         hotelMyCampPage.createHotelPageCodeBox
                 .sendKeys(faker.address().zipCode(),
                         Keys.TAB,
