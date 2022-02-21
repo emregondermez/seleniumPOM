@@ -1,4 +1,4 @@
-package tests.SomekeTest;
+package tests.SmokeTest;
 
 
 import org.openqa.selenium.Keys;
@@ -7,8 +7,6 @@ import org.testng.annotations.Test;
 import pages.HotelMyCampPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-
-import java.lang.module.Configuration;
 
 public class NegativeLoginTest {
     // 1) smokeTest  paketi altinda yeni bir Class olustur: NegativeTest
@@ -32,10 +30,11 @@ public class NegativeLoginTest {
         hotelMyCampPage.loginButton.click();
 
         Assert.assertTrue(hotelMyCampPage.incorrectPassword.isEnabled());
+        Driver.closeDriver();
     }
     @Test(priority = 2)
     public void negativeLoginTest2() {
-
+        Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         hotelMyCampPage.ilkLoginButton.click();
         hotelMyCampPage.usernameBox.sendKeys(ConfigReader.getProperty("HMCValidUsername"),Keys.TAB,ConfigReader.getProperty("HMCWrongPassword"));
         hotelMyCampPage.loginButton.click();

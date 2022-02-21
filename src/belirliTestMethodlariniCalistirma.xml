@@ -2,7 +2,7 @@
 <suite name="belirli test methodlarini calistirma">
     <test name="otel">
         <classes>
-            <class name="tests.day18.C02_WebTables">
+            <class name="tests.day18.E2ETesting">
                 <methods>
                     <include name="loginT"/>
                 </methods>

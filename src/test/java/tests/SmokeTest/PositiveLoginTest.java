@@ -1,4 +1,4 @@
-package tests.SomekeTest;
+package tests.SmokeTest;
 
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
