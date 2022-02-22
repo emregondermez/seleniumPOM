@@ -51,6 +51,8 @@ public class HotelMyCampPage {
     @FindBy(xpath = "//div[@class='bootbox-body']")
     public WebElement successfullySaved;
 
+    @FindBy(xpath = "//input[@id='Password']")
+    public WebElement passwordBox;
 
 
 
