@@ -16,7 +16,7 @@ public class C02_DataProviderNegatifLogintesti {
         String liste[][]={{"manager11","manager11"},{"manager12","manager12"},{"manager13","manager13"}};
         return liste;
     }
-/////
+
     @Test(dataProvider = "wrongUserList")
     public void yanlisSifreUsernameTesti(String wrongUsername, String wrongPassword){
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
